@@ -226,7 +226,7 @@ policy_imagenet = [[{
                        'prob': 0.6
                    }]]
 dataset_type = 'CustomDataset'
-data_root = '/home/zrg/workspace/DeepOmics/data/'
+data_root = '/../data/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -473,7 +473,7 @@ data = dict(
     workers_per_gpu=2,
     train=dict(
         type='CustomDataset',
-        data_prefix='/home/zrg/workspace/DeepOmics/data/train',
+        data_prefix='/../train',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(
@@ -699,7 +699,7 @@ data = dict(
         ]),
     val=dict(
         type='CustomDataset',
-        data_prefix='/home/zrg/workspace/DeepOmics/data/test',
+        data_prefix='/../data/test',
         test_mode=True,
         pipeline=[
             dict(type='LoadImageFromFile'),
@@ -719,7 +719,7 @@ data = dict(
         ]),
     test=dict(
         type='CustomDataset',
-        data_prefix='/home/zrg/workspace/DeepOmics/data/test',
+        data_prefix='/../data/test',
         test_mode=True,
         pipeline=[
             dict(type='LoadImageFromFile'),
